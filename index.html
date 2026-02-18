@@ -4,181 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SUKAPESTA MELAWI</title>
+<title>SukaPesta Melawi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+
 body{
-    margin:0;
-    font-family:'Outfit',sans-serif;
-    background:#0b0b14;
-    color:white;
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#3fb0c9;
+  text-align:center;
 }
 
-/* HERO */
+/* LOGO */
+.logo img{
+  width:130px;
+  margin-top:20px;
+}
+
+/* HERO COMIC */
 .hero{
-    background:url("Banner.jpeg") center/cover no-repeat;
-    padding:140px 20px;
-    text-align:center;
+  background:#ffc107;
+  margin:20px;
+  padding:35px;
+  border-radius:25px;
+  border:3px solid black;
+  box-shadow:8px 8px 0 black;
 }
 
 .hero h1{
-    font-size:50px;
-    letter-spacing:3px;
+  font-family:'Bangers';
+  font-size:44px;
+  margin:10px 0;
 }
 
-.hero p{
-    opacity:0.8;
+/* BUBBLE INFO */
+.bubble{
+  background:white;
+  border:3px solid black;
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:18px;
+  margin:8px;
+  box-shadow:3px 3px 0 black;
+  font-size:14px;
 }
 
-/* BUTTON */
+/* BUTTON WA */
 .btn{
-    display:inline-block;
-    background:#25D366;
-    padding:14px 28px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    margin-top:20px;
-    transition:0.3s;
+  background:#25D366;
+  padding:14px 28px;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  display:inline-block;
+  margin-top:18px;
+  font-weight:bold;
+  border:3px solid black;
+  box-shadow:3px 3px 0 black;
+  transition:0.2s;
 }
+
 .btn:hover{
-    transform:scale(1.05);
+  transform:translateY(-3px);
 }
 
-/* SECTION */
-.section{
-    padding:60px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* LINEUP */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:20px;
+/* TALENT GRID */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:22px;
+  padding:30px;
 }
 
 .card{
-    background:#151528;
-    border-radius:12px;
-    overflow:hidden;
-    text-align:center;
-    transition:0.3s;
+  background:#ffc107;
+  padding:12px;
+  border-radius:14px;
+  width:200px;
+  border:2px solid black;      /* garis tipis */
+  box-shadow:5px 5px 0 black;
+  transition:0.25s;
 }
+
 .card:hover{
-    transform:translateY(-6px);
+  transform:scale(1.05) rotate(-1deg);
 }
 
 .card img{
-    width:100%;
-    height:140px;
-    object-fit:cover;
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  border:2px solid black;
 }
 
 .card h3{
-    font-size:14px;
-    padding:10px;
-}
-
-/* TICKET */
-.ticket{
-    background:linear-gradient(45deg,#ff00cc,#3333ff);
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    margin-top:20px;
+  font-family:'Bangers';
+  font-size:18px;
+  margin:8px 0 4px;
 }
 
 /* FOOTER */
 footer{
-    background:#08080f;
-    text-align:center;
-    padding:30px;
-    opacity:0.7;
+  margin:20px;
+  font-size:13px;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- LOGO -->
+<div class="logo">
+<img src="Logo.PNG">
+</div>
+
 <!-- HERO -->
-<section class="hero">
-    <h1>SUKAPESTA MELAWI</h1>
-    <p>Sabtu, 25 April 2026<br>
-    Stadion Raden Tumenggung</p>
+<div class="hero">
+<h1>SukaPesta Melawi</h1>
 
-    <a class="btn" 
-       href="https://wa.me/6285752839048" 
-       target="_blank">
-       Hubungi WhatsApp
-    </a>
-</section>
+<div class="bubble">
+📅 Sabtu, 25 April 2026
+</div>
 
+<div class="bubble">
+📍 Stadion Raden Tumenggung Melawi
+</div>
 
-<!-- LINEUP -->
-<section class="section">
-<h2>Line Up Talent</h2>
+<a class="btn"
+href="https://wa.me/628XXXXXXXXXX"
+target="_blank">
+Pesan Tiket via WhatsApp
+</a>
 
-<div class="grid">
+</div>
+
+<!-- TALENT -->
+<div class="cards">
 
 <div class="card">
 <img src="Omo-Kucrut.png">
-<h3>OMO KUCRUT</h3>
-</div>
-
-<div class="card">
-<img src="DJ-Allo.jpeg">
-<h3>DJ ALLO</h3>
+<h3>Omo Kucrut</h3>
 </div>
 
 <div class="card">
 <img src="DJ-Vibil.jpeg">
-<h3>DJ VIBIL</h3>
+<h3>DJ Vibil</h3>
 </div>
 
 <div class="card">
-<img src="Eman-Jaklah.jpeg">
-<h3>EMAN JAKLAH</h3>
-</div>
-
-<div class="card">
-<img src="Lou-Da-Versa.jpeg">
-<h3>LOU DA VERSA</h3>
+<img src="DJ-Allo.jpeg">
+<h3>DJ Allo</h3>
 </div>
 
 <div class="card">
 <img src="Jash-Music.jpeg">
-<h3>JASH MUSIC</h3>
+<h3>Jash Music</h3>
+</div>
+
+<div class="card">
+<img src="Lou-Da-Versa.jpeg">
+<h3>Lou Da Versa</h3>
+</div>
+
+<div class="card">
+<img src="Eman-Jaklah.jpeg">
+<h3>Eman Jaklah</h3>
 </div>
 
 </div>
-</section>
-
-
-<!-- TICKET -->
-<section class="section">
-<h2>Harga Tiket</h2>
-
-<div class="ticket">
-<h3>Presale : Rp 75.000</h3>
-<h3>Normal : Rp XXX.000</h3>
-
-<a class="btn" 
-href="https://wa.me/6285752839048"
-target="_blank">
-Pesan Tiket
-</a>
-</div>
-
-</section>
-
 
 <footer>
-© 2026 Sukapesta Melawi
+© SukaPesta Melawi
 </footer>
 
 </body>
