@@ -10,28 +10,89 @@
 
 <style>
 
+/* ================= BACKGROUND COMIC MOVING ================= */
+
 body{
   margin:0;
   font-family:Poppins, sans-serif;
   text-align:center;
+  overflow-x:hidden;
 
-  /* radial burst + halftone dots */
   background:
-    radial-gradient(circle at center, #4cc2dd 0%, #2fa4bf 60%, #2489a1 100%),
     repeating-radial-gradient(circle,
       rgba(0,0,0,0.12) 0px,
       rgba(0,0,0,0.12) 2px,
       transparent 3px,
-      transparent 12px);
+      transparent 12px),
+    radial-gradient(circle at center, #4cc2dd 0%, #2fa4bf 60%, #2489a1 100%);
+
+  animation:bgMove 30s linear infinite;
 }
 
-/* LOGO */
+@keyframes bgMove{
+  from{ background-position:0 0, 0 0; }
+  to{ background-position:0 0, 600px 600px; }
+}
+
+/* ================= STICKERS ================= */
+
+.sticker{
+  position:fixed;
+  font-family:'Bangers';
+  font-size:48px;
+  color:#ffeb3b;
+  text-shadow:3px 3px 0 black;
+  pointer-events:none;
+  opacity:0;
+  animation:popIn 0.7s ease forwards;
+  z-index:0;
+}
+
+.s1{top:20%; left:5%}
+.s2{top:60%; left:8%}
+.s3{top:30%; right:6%}
+.s4{top:70%; right:5%}
+.s5{top:45%; left:12%}
+.s6{top:15%; right:12%}
+
+@keyframes popIn{
+  from{transform:scale(0); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+/* ================= LIGHTNING ================= */
+
+.lightning{
+  position:fixed;
+  width:60px;
+  height:60px;
+  background:yellow;
+  clip-path:polygon(40% 0, 60% 0, 45% 40%, 70% 40%, 30% 100%, 45% 55%, 25% 55%);
+  border:3px solid black;
+  z-index:0;
+  animation:float 4s ease-in-out infinite;
+}
+
+.l1{top:25%; left:20%}
+.l2{top:65%; right:20%}
+.l3{top:50%; left:85%}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+
+/* ================= LOGO ================= */
+
 .logo img{
   width:130px;
   margin-top:20px;
+  position:relative;
+  z-index:2;
 }
 
-/* HERO COMIC */
+/* ================= HERO ================= */
+
 .hero{
   background:#ffc107;
   margin:20px;
@@ -39,15 +100,18 @@ body{
   border-radius:25px;
   border:3px solid black;
   box-shadow:8px 8px 0 black;
+  position:relative;
+  z-index:2;
+  animation:popIn 0.8s ease;
 }
 
 .hero h1{
   font-family:'Bangers';
   font-size:44px;
-  margin:10px 0;
 }
 
-/* BUBBLE INFO */
+/* ================= BUBBLE ================= */
+
 .bubble{
   background:white;
   border:3px solid black;
@@ -56,10 +120,10 @@ body{
   border-radius:18px;
   margin:8px;
   box-shadow:3px 3px 0 black;
-  font-size:14px;
 }
 
-/* BUTTON WA */
+/* ================= BUTTON ================= */
+
 .btn{
   background:#25D366;
   padding:14px 28px;
@@ -75,16 +139,19 @@ body{
 }
 
 .btn:hover{
-  transform:translateY(-3px);
+  transform:translateY(-3px) scale(1.05);
 }
 
-/* TALENT GRID */
+/* ================= TALENT ================= */
+
 .cards{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:22px;
   padding:30px;
+  position:relative;
+  z-index:2;
 }
 
 .card{
@@ -95,10 +162,11 @@ body{
   border:2px solid black;
   box-shadow:5px 5px 0 black;
   transition:0.25s;
+  animation:popIn 0.8s ease;
 }
 
 .card:hover{
-  transform:scale(1.05) rotate(-1deg);
+  transform:scale(1.07) rotate(-1deg);
 }
 
 .card img{
@@ -111,20 +179,33 @@ body{
 
 .card h3{
   font-family:'Bangers';
-  font-size:18px;
-  margin:8px 0 4px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
   margin:20px;
-  font-size:13px;
+  position:relative;
+  z-index:2;
 }
 
 </style>
 </head>
 
 <body>
+
+<!-- STICKERS -->
+<div class="sticker s1">WOW!</div>
+<div class="sticker s2">POW!</div>
+<div class="sticker s3">BOOM!</div>
+<div class="sticker s4">BAM!</div>
+<div class="sticker s5">ZAP!</div>
+<div class="sticker s6">POP!</div>
+
+<!-- LIGHTNING -->
+<div class="lightning l1"></div>
+<div class="lightning l2"></div>
+<div class="lightning l3"></div>
 
 <!-- LOGO -->
 <div class="logo">
@@ -135,62 +216,27 @@ footer{
 <div class="hero">
 <h1>SukaPesta Melawi</h1>
 
-<div class="bubble">
-📅 Sabtu, 25 April 2026
-</div>
+<div class="bubble">📅 Sabtu, 25 April 2026</div>
+<div class="bubble">📍 Stadion Raden Tumenggung Melawi</div>
 
-<div class="bubble">
-📍 Stadion Raden Tumenggung Melawi
-</div>
-
-<a class="btn"
-href="https://wa.me/6285752839048"
-target="_blank">
+<a class="btn" href="https://wa.me/6285752839048" target="_blank">
 Pesan Tiket via WhatsApp
 </a>
-
 </div>
 
 <!-- TALENT -->
 <div class="cards">
 
-<div class="card">
-<img src="Omo-Kucrut.png">
-<h3>Omo Kucrut</h3>
-</div>
-
-<div class="card">
-<img src="DJ-Vibil.jpeg">
-<h3>DJ Vibil</h3>
-</div>
-
-<div class="card">
-<img src="DJ-Allo.jpeg">
-<h3>DJ Allo</h3>
-</div>
-
-<div class="card">
-<img src="Jash-Music.jpeg">
-<h3>Jash Music</h3>
-</div>
-
-<div class="card">
-<img src="Lou-Da-Versa.jpeg">
-<h3>Lou Da Versa</h3>
-</div>
-
-<div class="card">
-<img src="Eman-Jaklah.jpeg">
-<h3>Eman Jaklah</h3>
-</div>
+<div class="card"><img src="Omo-Kucrut.png"><h3>Omo Kucrut</h3></div>
+<div class="card"><img src="DJ-Vibil.jpeg"><h3>DJ Vibil</h3></div>
+<div class="card"><img src="DJ-Allo.jpeg"><h3>DJ Allo</h3></div>
+<div class="card"><img src="Jash-Music.jpeg"><h3>Jash Music</h3></div>
+<div class="card"><img src="Lou-Da-Versa.jpeg"><h3>Lou Da Versa</h3></div>
+<div class="card"><img src="Eman-Jaklah.jpeg"><h3>Eman Jaklah</h3></div>
 
 </div>
 
-<footer>
-© Sukapesta Melawi
-</footer>
+<footer>© Sukapesta Melawi</footer>
 
 </body>
 </html>
-
-
