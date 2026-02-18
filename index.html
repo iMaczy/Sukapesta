@@ -140,6 +140,65 @@ body{
   transform:translateY(-3px) scale(1.05);
 }
 
+/* ================= COUNTDOWN ================= */
+
+#countdown{
+  font-family:'Bangers';
+  font-size:28px;
+  background:#ff5722;
+  color:white;
+  padding:12px 20px;
+  border-radius:20px;
+  border:3px solid black;
+  box-shadow:3px 3px 0 black;
+  display:inline-block;
+  margin:12px 0;
+  animation:popIn 0.5s ease;
+}
+
+/* animasi detik */
+.countdown-animate{
+  display:inline-block;
+  animation:jump 0.3s ease;
+}
+
+@keyframes jump{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0);}
+}
+
+/* ================= HARGA TIKET ================= */
+
+.ticket-section{
+  display:inline-block;
+  background:#4caf50;
+  color:white;
+  padding:20px 25px;
+  border-radius:20px;
+  border:3px solid black;
+  box-shadow:5px 5px 0 black;
+  font-family:'Bangers';
+  margin:20px;
+  text-align:left;
+}
+
+.ticket-section h3{
+  margin:0 0 10px 0;
+}
+
+.ticket-section .ticket{
+  background:white;
+  color:black;
+  padding:6px 12px;
+  border-radius:12px;
+  border:2px solid black;
+  margin:4px 0;
+  display:inline-block;
+  font-weight:bold;
+  box-shadow:2px 2px 0 black;
+}
+
 /* ================= TALENT ================= */
 
 .cards{
@@ -218,14 +277,23 @@ footer{
 <div class="bubble">📅 Sabtu, 25 April 2026</div>
 <div class="bubble">📍 Stadion Raden Tumenggung Melawi</div>
 
-<a class="btn" href="https://wa.me/6285752839048" target="_blank">
+<!-- COUNTDOWN -->
+<div id="countdown">00d 00h 00m 00s</div>
+
+<a class="btn" href="https://wa.me/6285752839048?text=Hallo%20Admin%2C%20Saya%20mau%20beli%20tiket%20*SUKAPESTA*" target="_blank">
 Pesan Tiket via WhatsApp
 </a>
 </div>
 
+<!-- HARGA TIKET -->
+<div class="ticket-section">
+<h3>Harga Tiket</h3>
+<div class="ticket">Presale: Rp75.000</div>
+<div class="ticket">Reguler: Rpxxx.xxx</div>
+</div>
+
 <!-- TALENT -->
 <div class="cards">
-
 <div class="card"><img src="All-Talent.jpeg"><h3>All Talent</h3></div>
 <div class="card"><img src="Omo-Kucrut.jpeg"><h3>DJ Omo Kucrut</h3></div>
 <div class="card"><img src="DJ-Vibil.jpeg"><h3>DJ Vibil</h3></div>
@@ -233,19 +301,35 @@ Pesan Tiket via WhatsApp
 <div class="card"><img src="Jash-Music.jpeg"><h3>Jash Music</h3></div>
 <div class="card"><img src="Lou-Da-Versa.jpeg"><h3>Lou Da Versa</h3></div>
 <div class="card"><img src="Eman-Jaklah.jpeg"><h3>Eman Jaklah</h3></div>
-
 </div>
 
 <footer>Copyright © 2026 Sukapesta. All Rights Reserved</footer>
 
+<!-- ================= COUNTDOWN SCRIPT ================= -->
+<script>
+const countdownEl = document.getElementById('countdown');
+const eventDate = new Date("April 25, 2026 18:00:00").getTime();
+
+function updateCountdown(){
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  const days = Math.floor(distance / (1000*60*60*24));
+  const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+  const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+  const seconds = Math.floor((distance % (1000*60))/1000);
+
+  // animasi detik
+  countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m <span class="countdown-animate">${seconds}</span>s`;
+
+  if(distance < 0){
+    countdownEl.innerHTML = "Event Telah Dimulai!";
+  }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
