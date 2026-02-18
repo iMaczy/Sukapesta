@@ -6,7 +6,7 @@
 
 <title>SUKAPESTA MELAWI</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,107 +16,108 @@ background:#39a5c6;
 font-family:Poppins;
 }
 
-/* HERO COMIC */
+/* HERO */
 
 .hero{
 background:#ffc107;
 border:6px solid black;
 border-radius:25px;
-margin:25px;
-padding:40px;
+margin:20px;
+padding:35px;
 text-align:center;
 box-shadow:10px 10px 0 black;
 }
 
 .hero h1{
 font-family:'Bangers';
-font-size:48px;
-letter-spacing:2px;
+font-size:44px;
+margin:10px 0;
 }
-
-.hero p{
-font-weight:600;
-}
-
-/* BUBBLE */
 
 .bubble{
 background:white;
 border:4px solid black;
 display:inline-block;
-padding:10px 18px;
-border-radius:18px;
-margin-top:10px;
+padding:8px 16px;
+border-radius:15px;
+font-size:14px;
 box-shadow:4px 4px 0 black;
 }
 
-/* LINEUP */
+/* GALLERY PERFECT FIT */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-padding:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+padding:20px;
 }
 
 .card{
 background:#ffc107;
 border:5px solid black;
-border-radius:15px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:8px 8px 0 black;
+box-shadow:6px 6px 0 black;
 transition:.25s;
 }
 
 .card:hover{
-transform:scale(1.05) rotate(-1deg);
+transform:scale(1.04);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:260px;
 object-fit:cover;
+display:block;
 }
+
+/* NAMA KECIL */
 
 .card h3{
+font-size:14px;
 text-align:center;
-font-family:'Bangers';
-padding:10px;
+margin:6px 0 8px;
+font-weight:500;
 }
 
-/* INFO */
+/* INFO BOX */
 
 .info{
 background:white;
 border:6px solid black;
-border-radius:20px;
-padding:30px;
-margin:30px;
+border-radius:18px;
+padding:25px;
+margin:20px;
 text-align:center;
-box-shadow:10px 10px 0 black;
+box-shadow:8px 8px 0 black;
 }
 
-.btn{
+/* WHATSAPP BUTTON */
+
+.wa{
 display:inline-block;
 margin-top:15px;
-padding:12px 20px;
-background:#ff3b3b;
+padding:12px 22px;
+background:#25D366;
 color:white;
 text-decoration:none;
-border:4px solid black;
 border-radius:10px;
+border:4px solid black;
 font-weight:bold;
 box-shadow:4px 4px 0 black;
+transition:.2s;
 }
 
-.btn:hover{
+.wa:hover{
 transform:translateY(-3px);
 }
 
 footer{
 text-align:center;
 padding:20px;
-font-weight:600;
+font-size:13px;
 }
 
 </style>
@@ -125,33 +126,36 @@ font-weight:600;
 <body>
 
 <div class="hero">
-<img src="Logo.PNG" width="90">
+<img src="Logo.PNG" width="80">
 <h1>SUKAPESTA MELAWI</h1>
-<p>SABTU 25 APRIL 2026</p>
 
 <div class="bubble">
-STADION RADEN TUMENGGUNG MELAWI
+Sabtu 25 April 2026 • Stadion Raden Tumenggung Melawi
 </div>
 </div>
 
 <div class="gallery">
-
-<div class="card"><img src="DJ-Allo.jpeg"><h3>DJ ALLO</h3></div>
-<div class="card"><img src="DJ-Vibil.jpeg"><h3>DJ VIBIL</h3></div>
-<div class="card"><img src="Eman-Jaklah.jpeg"><h3>EMAN JAKLAH</h3></div>
-<div class="card"><img src="Jash-Music.jpeg"><h3>JASH MUSIC</h3></div>
-<div class="card"><img src="Lou-Da-Versa.jpeg"><h3>LOU DA VERSA</h3></div>
-<div class="card"><img src="Omo-Kucrut.png"><h3>OMO KUCRUT</h3></div>
+  
+<div class="card"><img src="Omo-Kucrut.png"><h3>Omo Kucrut</h3></div>
+<div class="card"><img src="DJ-Allo.jpeg"><h3>DJ Allo</h3></div>
+<div class="card"><img src="DJ-Vibil.jpeg"><h3>DJ Vibil</h3></div>
+<div class="card"><img src="Eman-Jaklah.jpeg"><h3>Eman Jaklah</h3></div>
+<div class="card"><img src="Jash-Music.jpeg"><h3>Jash Music</h3></div>
+<div class="card"><img src="Lou-Da-Versa.jpeg"><h3>Lou Da Versa</h3></div>
+<div class="card"><img src="Omo-Kucrut.png"><h3>Omo Kucrut</h3></div>
 
 </div>
 
 <div class="info">
-<h2>INFORMASI TIKET</h2>
 
-<p>🎟 Presale</p>
-<p>🎟 On The Spot</p>
+<h2>Informasi Tiket</h2>
+<p>Presale 
+<p>On The Spot</p>
 
-<a class="btn" href="#">Pesan Ticket</a>
+<!-- GANTI NOMOR DI SINI -->
+<a class="wa" href="https://wa.me/6285752839048" target="_blank">
+Hubungi WhatsApp
+</a>
 
 </div>
 
@@ -161,4 +165,3 @@ STADION RADEN TUMENGGUNG MELAWI
 
 </body>
 </html>
-
