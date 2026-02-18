@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SukaPesta Melawi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(8px);
+  z-index:999;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:radial-gradient(circle at center,#7c3aed,#0f172a);
+}
+
+.hero h1{
+  font-size:60px;
+  text-shadow:0 0 20px #9333ea;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:.9;
+}
+
+/* COUNTDOWN */
+.count{
+  margin-top:20px;
+  font-size:28px;
+  color:#22c55e;
+}
+
+/* SECTION */
+.section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.card{
+  background:#111827;
+  border-radius:16px;
+  overflow:hidden;
+  width:260px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #9333ea;
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+/* TICKET */
+.ticket{
+  background:linear-gradient(135deg,#1e293b,#4c1d95);
+  padding:60px;
+  border-radius:20px;
+  display:inline-block;
+}
+
+.price{
+  font-size:36px;
+  color:#22c55e;
+  margin:10px 0;
+}
+
+/* FLOAT WA */
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:16px 20px;
+  border-radius:50px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 20px #25D366;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  text-align:center;
+  background:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>SukaPesta</strong>
+  <div>
+    <a href="#talent">Talent</a>
+    <a href="#ticket">Tiket</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>SukaPesta Melawi 🎉</h1>
+    <p>Pesta terbesar tahun ini — jangan sampai ketinggalan</p>
+
+    <div class="count" id="countdown"></div>
+  </div>
+</section>
+
+<!-- TALENT -->
+<section class="section" id="talent">
+<h2>Talent Yang Tampil</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>DJ ARTIS 1</h3>
+<p>Main Stage</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>BAND ARTIS 2</h3>
+<p>Live Show</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<h3>MC ARTIS 3</h3>
+<p>Host</p>
+</div>
+
+</div>
+</section>
+
+<!-- TICKET -->
+<section class="section" id="ticket">
+<h2>Harga Tiket</h2>
+
+<div class="ticket">
+<p>Early Bird</p>
+<div class="price">Rp 50.000</div>
+
+<p>Regular</p>
+<div class="price">Rp 75.000</div>
+</div>
+
+</section>
+
+<!-- WA BUTTON -->
+<a class="wa"
+href="https://wa.me/628XXXXXXXXXX"
+target="_blank">
+Chat WA
+</a>
+
+<footer>
+© 2026 SukaPesta Melawi
+</footer>
+
+<!-- COUNTDOWN SCRIPT -->
+<script>
+const targetDate = new Date("2026-03-30 19:00:00").getTime();
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const gap = targetDate - now;
+
+  const d = Math.floor(gap/(1000*60*60*24));
+  const h = Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+  const m = Math.floor((gap%(1000*60*60))/(1000*60));
+  const s = Math.floor((gap%(1000*60))/1000);
+
+  document.getElementById("countdown").innerHTML =
+    `${d}H ${h}J ${m}M ${s}D`;
+},1000);
+</script>
+
+</body>
+</html>
