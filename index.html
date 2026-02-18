@@ -13,8 +13,16 @@
 body{
   margin:0;
   font-family:Poppins, sans-serif;
-  background:#3fb0c9;
   text-align:center;
+
+  /* radial burst + halftone dots */
+  background:
+    radial-gradient(circle at center, #4cc2dd 0%, #2fa4bf 60%, #2489a1 100%),
+    repeating-radial-gradient(circle,
+      rgba(0,0,0,0.12) 0px,
+      rgba(0,0,0,0.12) 2px,
+      transparent 3px,
+      transparent 12px);
 }
 
 /* LOGO */
@@ -184,4 +192,5 @@ Pesan Tiket via WhatsApp
 
 </body>
 </html>
+
 
