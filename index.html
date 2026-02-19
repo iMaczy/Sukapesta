@@ -9,13 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-
 body{
   margin:0;
   font-family:Poppins, sans-serif;
   text-align:center;
   overflow-x:hidden;
-
   background:
     repeating-radial-gradient(circle,
       rgba(0,0,0,0.12) 0px,
@@ -23,7 +21,6 @@ body{
       transparent 3px,
       transparent 12px),
     radial-gradient(circle at center, #4cc2dd 0%, #2fa4bf 60%, #2489a1 100%);
-
   animation:bgMove 30s linear infinite;
 }
 
@@ -32,8 +29,7 @@ body{
   to{ background-position:0 0, 600px 600px; }
 }
 
-/* ================= STICKERS ================= */
-
+/* STICKERS */
 .sticker{
   position:fixed;
   font-family:'Bangers';
@@ -45,7 +41,6 @@ body{
   animation:popIn 0.7s ease forwards;
   z-index:0;
 }
-
 .s1{top:20%; left:5%}
 .s2{top:60%; left:8%}
 .s3{top:30%; right:6%}
@@ -53,13 +48,7 @@ body{
 .s5{top:45%; left:12%}
 .s6{top:15%; right:12%}
 
-@keyframes popIn{
-  from{transform:scale(0); opacity:0;}
-  to{transform:scale(1); opacity:1;}
-}
-
-/* ================= LIGHTNING ================= */
-
+/* LIGHTNING */
 .lightning{
   position:fixed;
   width:60px;
@@ -70,18 +59,16 @@ body{
   z-index:0;
   animation:float 4s ease-in-out infinite;
 }
-
 .l1{top:25%; left:20%}
 .l2{top:65%; right:20%}
 .l3{top:50%; left:85%}
 
 @keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-12px)}
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
 }
 
-/* ================= LOGO ================= */
-
+/* LOGO */
 .logo img{
   width:130px;
   margin-top:20px;
@@ -89,8 +76,7 @@ body{
   z-index:2;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
   background:#ffc107;
   margin:20px;
@@ -102,14 +88,12 @@ body{
   z-index:2;
   animation:popIn 0.8s ease;
 }
-
 .hero h1{
   font-family:'Bangers';
   font-size:44px;
 }
 
-/* ================= BUBBLE ================= */
-
+/* BUBBLE */
 .bubble{
   background:white;
   border:3px solid black;
@@ -120,8 +104,7 @@ body{
   box-shadow:3px 3px 0 black;
 }
 
-/* ================= BUTTON ================= */
-
+/* BUTTON */
 .btn{
   background:#25D366;
   padding:14px 28px;
@@ -135,13 +118,11 @@ body{
   box-shadow:3px 3px 0 black;
   transition:0.2s;
 }
-
 .btn:hover{
   transform:translateY(-3px) scale(1.05);
 }
 
-/* ================= COUNTDOWN ================= */
-
+/* COUNTDOWN */
 #countdown{
   font-family:'Bangers';
   font-size:28px;
@@ -155,21 +136,17 @@ body{
   margin:12px 0;
   animation:popIn 0.5s ease;
 }
-
-/* animasi detik */
 .countdown-animate{
   display:inline-block;
   animation:jump 0.3s ease;
 }
-
 @keyframes jump{
   0%{transform:translateY(0);}
   50%{transform:translateY(-8px);}
   100%{transform:translateY(0);}
 }
 
-/* ================= HARGA TIKET ================= */
-
+/* TICKET SECTION */
 .ticket-section{
   display:inline-block;
   background:#ffc107;
@@ -179,30 +156,43 @@ body{
   border:3px solid black;
   box-shadow:5px 5px 0 black;
   font-family:'Bangers';
-  margin:20px;
+  margin:20px auto;
   text-align:center;
   z-index:3;
   position:relative; 
 }
-
-.ticket-section h3{
-  margin:0 0 10px 0;
-}
-
+.ticket-section h3{ margin:0 0 10px 0; }
 .ticket-section .ticket{
   background:white;
   color:black;
   padding:6px 12px;
   border-radius:12px;
   border:2px solid black;
-  margin:4px 0 auto; /* center */
+  margin:4px 0 auto;
   display:inline-block;
   font-weight:bold;
   box-shadow:2px 2px 0 black;
 }
 
-/* ================= TALENT ================= */
+/* LINE UP BUBBLE */
+.lineup-bubble{
+  display:inline-block;
+  background:#ffeb3b;
+  color:black;
+  font-family:'Bangers', sans-serif;
+  font-size:28px;
+  padding:12px 25px;
+  border-radius:20px;
+  border:3px solid black;
+  box-shadow:3px 3px 0 black;
+  margin:20px auto;
+  text-align:center;
+  position:relative;
+  z-index:3;
+  animation:popIn 0.8s ease;
+}
 
+/* TALENT */
 .cards{
   display:flex;
   flex-wrap:wrap;
@@ -212,7 +202,6 @@ body{
   position:relative;
   z-index:2;
 }
-
 .card{
   background:#ffc107;
   padding:12px;
@@ -223,11 +212,9 @@ body{
   transition:0.25s;
   animation:popIn 0.8s ease;
 }
-
 .card:hover{
   transform:scale(1.07) rotate(-1deg);
 }
-
 .card img{
   width:100%;
   height:240px;
@@ -235,20 +222,15 @@ body{
   border-radius:10px;
   border:2px solid black;
 }
+.card h3{ font-family:'Bangers'; }
 
-.card h3{
-  font-family:'Bangers';
-}
-
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer{
   margin:10px;
   position:relative;
   z-index:2;
   font-size:12px;
 }
-
 </style>
 </head>
 
@@ -275,27 +257,24 @@ footer{
 <!-- HERO -->
 <div class="hero">
 <h1>SukaPesta Melawi</h1>
-
 <div class="bubble">📅 Sabtu, 25 April 2026</div>
 <div class="bubble">📍 Stadion Raden Tumenggung Melawi</div>
 
 <!-- COUNTDOWN -->
 <div id="countdown">00d 00h 00m 00s</div>
-
-</a>
 </div>
 
-<!-- HARGA TIKET -->
+<!-- TICKET SECTION -->
 <div class="ticket-section">
 <h3>Harga Tiket</h3>
 <div class="ticket">Presale: Rp75.000</div>
-<div class="ticket">Reguler: Rpxxx.xxx</div>
+<div class="ticket">Reguler: Rp150.000</div>
 <a class="btn" href="https://wa.me/6285752839048?text=Hallo%20Admin%2C%20Saya%20mau%20beli%20tiket%20*SUKAPESTA*" target="_blank">
 Pesan Tiket via WhatsApp
 </a>
 </div>
 
-<!-- BUBBLE LINE UP TALENT -->
+<!-- LINE UP BUBBLE -->
 <div class="lineup-bubble">
   Line Up Talent
 </div>
@@ -313,7 +292,7 @@ Pesan Tiket via WhatsApp
 
 <footer>Copyright © 2026 Sukapesta. All Rights Reserved</footer>
 
-<!-- ================= COUNTDOWN SCRIPT ================= -->
+<!-- COUNTDOWN SCRIPT -->
 <script>
 const countdownEl = document.getElementById('countdown');
 const eventDate = new Date("April 25, 2026 18:00:00").getTime();
@@ -327,7 +306,6 @@ function updateCountdown(){
   const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
   const seconds = Math.floor((distance % (1000*60))/1000);
 
-  // animasi detik
   countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m <span class="countdown-animate">${seconds}</span>s`;
 
   if(distance < 0){
@@ -341,7 +319,4 @@ updateCountdown();
 
 </body>
 </html>
-
-
-
 
