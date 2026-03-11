@@ -32,8 +32,6 @@ body{
   to{ background-position:0 0, 600px 600px; }
 }
 
-/* ================= STICKERS ================= */
-
 .sticker{
   position:fixed;
   font-family:'Bangers';
@@ -58,8 +56,6 @@ body{
   to{transform:scale(1); opacity:1;}
 }
 
-/* ================= LIGHTNING ================= */
-
 .lightning{
   position:fixed;
   width:60px;
@@ -80,16 +76,12 @@ body{
   50%{transform:translateY(-12px)}
 }
 
-/* ================= LOGO ================= */
-
 .logo img{
   width:130px;
   margin-top:20px;
   position:relative;
   z-index:2;
 }
-
-/* ================= HERO ================= */
 
 .hero{
   background:#ffc107;
@@ -108,8 +100,6 @@ body{
   font-size:44px;
 }
 
-/* ================= BUBBLE ================= */
-
 .bubble{
   background:white;
   border:3px solid black;
@@ -119,8 +109,6 @@ body{
   margin:8px;
   box-shadow:3px 3px 0 black;
 }
-
-/* ================= BUTTON ================= */
 
 .btn{
   background:#25D366;
@@ -140,8 +128,6 @@ body{
   transform:translateY(-3px) scale(1.05);
 }
 
-/* ================= COUNTDOWN ================= */
-
 #countdown{
   font-family:'Bangers';
   font-size:28px;
@@ -153,10 +139,8 @@ body{
   box-shadow:3px 3px 0 black;
   display:inline-block;
   margin:12px 0;
-  animation:popIn 0.5s ease;
 }
 
-/* animasi detik */
 .countdown-animate{
   display:inline-block;
   animation:jump 0.3s ease;
@@ -167,8 +151,6 @@ body{
   50%{transform:translateY(-8px);}
   100%{transform:translateY(0);}
 }
-
-/* ================= HARGA TIKET ================= */
 
 .ticket-section{
   display:inline-block;
@@ -195,12 +177,12 @@ body{
   padding:6px 12px;
   border-radius:12px;
   border:2px solid black;
-  margin:4px 0 auto; /* center */
+  margin:4px 0 auto;
   display:inline-block;
   font-weight:bold;
   box-shadow:2px 2px 0 black;
 }
-  /* LINE UP BUBBLE */
+
 .lineup-bubble{
   display:inline-block;
   background:#ff5722;
@@ -215,10 +197,7 @@ body{
   text-align:center;
   position:relative;
   z-index:3;
-  animation:popIn 0.8s ease;
 }
-
-/* ================= TALENT ================= */
 
 .cards{
   display:flex;
@@ -238,7 +217,6 @@ body{
   border:2px solid black;
   box-shadow:5px 5px 0 black;
   transition:0.25s;
-  animation:popIn 0.8s ease;
 }
 
 .card:hover{
@@ -257,8 +235,6 @@ body{
   font-family:'Bangers';
 }
 
-/* ================= FOOTER ================= */
-
 footer{
   margin:10px;
   position:relative;
@@ -271,7 +247,6 @@ footer{
 
 <body>
 
-<!-- STICKERS -->
 <div class="sticker s1">WOW!</div>
 <div class="sticker s2">POW!</div>
 <div class="sticker s3">BOOM!</div>
@@ -279,48 +254,62 @@ footer{
 <div class="sticker s5">ZAP!</div>
 <div class="sticker s6">POP!</div>
 
-<!-- LIGHTNING -->
 <div class="lightning l1"></div>
 <div class="lightning l2"></div>
 <div class="lightning l3"></div>
 
-<!-- LOGO -->
 <div class="logo">
 <img src="Logo.jpeg">
 </div>
 
-<!-- HERO -->
 <div class="hero">
-<h1>SUKAPESTA MELAWI</h1>
 
-<h3>Pesta Musik dan Kesenangan Tak Terlupakan! Bersiaplah untuk Malam Penuh Irama & Energi</h3>
+<h1>SUKAPESTA MELAWI 2026</h1>
+
+<h3>
+Festival Musik Terbesar di Melawi! 🔥  
+Satu malam penuh musik, DJ spektakuler, dan pesta tanpa henti!
+</h3>
+
 <div class="bubble">📅 Sabtu, 25 April 2026</div>
 <div class="bubble">📍 Stadion Raden Tumenggung Melawi</div>
 
-<!-- COUNTDOWN -->
 <div id="countdown">00d 00h 00m 00s</div>
 
-</a>
+<p style="font-weight:500">
+⚠️ Tiket Presale Terbatas — Jangan Sampai Kehabisan!
+</p>
+
+<div class="bubble">
+🔥 SUKAPESTA adalah festival musik terbesar di Melawi yang menghadirkan DJ, performer, dan hiburan spektakuler dalam satu panggung megah.
 </div>
 
-<!-- HARGA TIKET -->
+<div class="bubble">
+🎧 Nikmati malam penuh musik EDM, party vibes, dan energi luar biasa bersama ribuan penonton lainnya!
+</div>
+
+</div>
+
 <div class="ticket-section">
-<h3>Harga Tiket</h3>
+
+<h3>🔥 Dapatkan Tiketmu Sekarang</h3>
+
 <div class="ticket">Presale 1: Rp75.000</div>
 <div class="ticket">Presale 2: Rpxxx.xxx</div>
 <div class="ticket">Reguler: Rpxxx.xxx</div>
+
 <a class="btn" href="https://wa.me/6285752839048?text=Hallo%20Admin%2C%20Saya%20mau%20beli%20tiket%20*SUKAPESTA*" target="_blank">
-Pesan Tiket via WhatsApp
+Beli Tiket Sekarang 🎟️
 </a>
+
 </div>
 
-<!-- LINE UP BUBBLE -->
 <div class="lineup-bubble">
-  Line Up Talent
+🔥 Special Guest & DJ Line Up
 </div>
 
-<!-- TALENT -->
 <div class="cards">
+
 <div class="card"><img src="all-talent1.jpg"><h3>All Talent</h3></div>
 <div class="card"><img src="atta.jpg"><h3>Atta Halilintar</h3></div>
 <div class="card"><img src="Omo-Kucrut.jpeg"><h3>DJ Omo Kucrut</h3></div>
@@ -329,45 +318,46 @@ Pesan Tiket via WhatsApp
 <div class="card"><img src="Jash-Music.jpeg"><h3>Jash Music</h3></div>
 <div class="card"><img src="Lou-Da-Versa.jpeg"><h3>Lou Da Versa</h3></div>
 <div class="card"><img src="Eman-Jaklah.jpeg"><h3>Eman Jaklah</h3></div>
+
+</div>
+
+<div class="bubble">
+🔥 Jangan cuma dengar ceritanya — jadilah bagian dari pestanya!
+</div>
+
+<div class="bubble">
+🎉 SUKAPESTA MELAWI 2026 akan menjadi malam paling seru tahun ini.
 </div>
 
 <footer>Copyright © 2026 Sukapesta. All Rights Reserved</footer>
 
-<!-- ================= COUNTDOWN SCRIPT ================= -->
 <script>
+
 const countdownEl = document.getElementById('countdown');
 const eventDate = new Date("April 25, 2026 18:00:00").getTime();
 
 function updateCountdown(){
-  const now = new Date().getTime();
-  const distance = eventDate - now;
 
-  const days = Math.floor(distance / (1000*60*60*24));
-  const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-  const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-  const seconds = Math.floor((distance % (1000*60))/1000);
+const now = new Date().getTime();
+const distance = eventDate - now;
 
-  // animasi detik
-  countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m <span class="countdown-animate">${seconds}</span>s`;
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+const seconds = Math.floor((distance % (1000*60))/1000);
 
-  if(distance < 0){
-    countdownEl.innerHTML = "Event Telah Dimulai!";
-  }
+countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m <span class="countdown-animate">${seconds}</span>s`;
+
+if(distance < 0){
+countdownEl.innerHTML = "Event Telah Dimulai!";
 }
 
-setInterval(updateCountdown, 1000);
+}
+
+setInterval(updateCountdown,1000);
 updateCountdown();
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
